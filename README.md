@@ -50,7 +50,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 ## Installation
 1. Ran npm init. 
-2. Installed the required packages: [express-handlebars](https://www.npmjs.com/package/express-handlebars), 
+2. Installed the required packages: [express-handlebars](https://www.npmjs.com/package/express-handlebars), [MySQL2](https://www.npmjs.com/package/mysql2), 
 
 ## Usage
 

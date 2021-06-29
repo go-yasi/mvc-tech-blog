@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/go-yasi/mvc-tech-blog#readme",
   "dependencies": {
-    "express-handlebars": "^5.3.2"
+    "express-handlebars": "^5.3.2",
+    "mysql2": "^2.2.5"
   }
 }

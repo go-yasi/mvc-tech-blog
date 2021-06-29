@@ -57,6 +57,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 - I then added a schema.sql file to my db folder with the code to drop, create, and use the blog database.
 - Added css and js folders to my public folder. Then created js files for login and logout functions. 
 - Updated main.handlebars file to include the page title and the navigation bar with links to the home page, dashboard, and conditional buttons to login or logout. 
+- Updated homepage.handlebars file to create a blog post for each post that is created.
 
 
 ## Usage

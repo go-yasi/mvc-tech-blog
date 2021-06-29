@@ -53,6 +53,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 2. Started building MVC file structure for my application: 
 - I first added all of the necessary folders to organize my content. 
 - Next, I created a connection.js file in my config folder to import the Sequelize library, and access the info in my .env file. 
+- Then I added an index.js file to my controllers folder, to require the express router as well as the newly created api folder for my api routes.
 
 
 ## Usage

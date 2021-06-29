@@ -56,6 +56,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 - Then I added an index.js file to my controllers folder, to require the express router as well as the newly created api folder for my api routes.
 - I then added a schema.sql file to my db folder with the code to drop, create, and use the blog database.
 - Added css and js folders to my public folder. Then created js files for login and logout functions. 
+- Updated main.handlebars file to include the page title and the navigation bar with links to the home page, dashboard, and conditional buttons to login or logout. 
 
 
 ## Usage

@@ -49,6 +49,8 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 ## Installation
+1. Ran npm init. 
+2. Installed the required packages: [express-handlebars](https://www.npmjs.com/package/express-handlebars), 
 
 ## Usage
 

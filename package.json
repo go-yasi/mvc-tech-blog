@@ -1,0 +1,23 @@
+{
+  "name": "mvc-tech-blog",
+  "version": "1.0.0",
+  "description": "## Description The goal of this assignment was to create a CMS-style blog where users can publish blog posts and comment on other posts as well. This site was built completely from scratch, then deployed to Heroku. It follows the MVC structure, uses Handlebars.js as the templating language, [Sequelize](https://www.npmjs.com/package/sequelize) as the ORM, and the [express-session](https://www.npmjs.com/package/express-session) npm package for authentication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/go-yasi/mvc-tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/go-yasi/mvc-tech-blog/issues"
+  },
+  "homepage": "https://github.com/go-yasi/mvc-tech-blog#readme",
+  "dependencies": {
+    "express-handlebars": "^5.3.2"
+  }
+}

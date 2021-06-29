@@ -49,8 +49,7 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 ## Installation
-1. Ran npm init. 
-2. Installed the required packages: [express-handlebars](https://www.npmjs.com/package/express-handlebars), [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [dotenv](https://www.npmjs.com/package/dotenv), [bcrypt](https://www.npmjs.com/package/bcrypt), [express-session](https://www.npmjs.com/package/express-session), and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize).
+1. Ran npm init, then installed the required packages: [express-handlebars](https://www.npmjs.com/package/express-handlebars), [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [dotenv](https://www.npmjs.com/package/dotenv), [bcrypt](https://www.npmjs.com/package/bcrypt), [express-session](https://www.npmjs.com/package/express-session), and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize).
 
 ## Usage
 

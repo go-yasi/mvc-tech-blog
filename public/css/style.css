@@ -1,0 +1,15 @@
+/* GLOBAL */
+/* button {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+} */
+
+/* MAIN */
+.main-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 42px;
+    color: limegreen;
+    text-align: center;
+}
+

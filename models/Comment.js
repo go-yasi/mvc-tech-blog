@@ -10,16 +10,16 @@ Comment.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
-          comment: {
-              type: DataTypes.TEXT,
-              allowNull: false
-          },
-          user_username: {
-            type: DataTypes.STRING,
+        },
+        comment: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'username',
+                key: 'id',
             },
         }
     },
@@ -32,4 +32,4 @@ Comment.init(
     }
 );
 
-module.export = Comment;
+module.exports = Comment;

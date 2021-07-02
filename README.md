@@ -59,6 +59,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 - Updated main.handlebars file to include the page title and the navigation bar with links to the home page, dashboard, and conditional buttons to login or logout. 
 - Updated homepage.handlebars file to create a blog post for each post that is created.
 - Updated login.handlebars to create a sign up and a sign in form. 
+- Added auth.js file to utils folder.  
 
 
 ## Usage

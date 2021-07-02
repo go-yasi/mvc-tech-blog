@@ -1,8 +1,15 @@
-{{#each blog_post as |post|}}
 
-<div class="blog-post">
-    <h2 class="post-title"> {{post.title}} </h2>
-    <p class="post-date"> {{post.date}} </p>
+
+{{!-- All blog posts --}}
+<div class="all-posts">
+    <h3 class="location-header">Latest Blog Posts</h3>
+    
+    {{!-- Dynamically create recent blog posts --}}
+    {{#each blog_post as |post|}}
+    <div class="blog-post">
+        <h2 class="post-title"> {{post.title}} </h2>
+        <p class="post-date"> {{post.date}} </p>
+    </div>
+    {{/each}}
+
 </div>
-
-{{/each}}

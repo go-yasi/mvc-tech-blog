@@ -6,6 +6,12 @@
 } */
 
 /* MAIN */
+header {
+    background-color: teal;
+}
+nav {
+    background-color: thistle;
+}
 .main-logo {
     font-family: 'Press Start 2P', monospace;
     font-size: 42px;
@@ -13,3 +19,7 @@
     text-align: center;
 }
 
+/* HOME PAGE */
+.all-posts {
+    background-color: wheat;
+}

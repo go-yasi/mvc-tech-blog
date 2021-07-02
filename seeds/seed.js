@@ -10,7 +10,7 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true,
     });
-    console.log('\n----- SAMPLE POSTS SEEDED -----\n');
+    console.log('\n----- SAMPLE BLOG POSTS SEEDED -----\n');
 
     process.exit(0);
 };

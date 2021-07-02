@@ -23,3 +23,17 @@ nav {
 .all-posts {
     background-color: wheat;
 }
+.blog-post {
+    border:1px solid green;
+    margin: 1em 2em;
+}
+.post-title {
+    background-color: mediumspringgreen;
+    font-family: 'Press Start 2P', monospace;
+    padding: .8em .5em;
+}
+.post-details {
+    background-color: mediumslateblue;
+    display: flex;
+    justify-content: space-between;
+}

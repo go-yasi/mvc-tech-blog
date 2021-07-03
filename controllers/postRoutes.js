@@ -11,7 +11,7 @@ async (req, res) => {
             include: [{ model: User }, { model: Comment }],
         });
         if (!postData) {
-            res.status(404).json({ message: "This post you're looking for does not exist"});
+            res.status(404).json({ message: "The post you're looking for does not exist"});
             return;
         }
         const post = postData.get({plain: true});

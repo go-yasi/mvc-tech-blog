@@ -1,4 +1,4 @@
-<div class="blog-post">
+<div class="single-blog-post">
     <div class="blog-post-header">
         <h3 class="blog-post-title">{{post.title}}</h3>
     </div>
@@ -8,4 +8,25 @@
     <div class="blog-post-details">
         <p class="blog-post-user">Posted by @{{post.user_id}} on {{post.created_at}}</p>
     </div>
+</div>
+
+<div class="blog-post-comments">
+    <h4 class="posted-comments-title">Comments About this Post:</h4>
+    <div class="all-comments">
+    {{!-- this is where the submitted comments would appear --}}
+        {{!-- {{#each comments as |comment|}} --}}
+        <div class="comment-card">
+            <p class="comment-text">Example comment here{{comment.comment}}</p>
+            <div class="comment-details">
+                <p class="comment-user">Posted by: @{{comment.user_id}}</p>
+                <p class="comment-date">Date posted:{{comment.created_at}}</p>
+            </div>
+        </div>
+        {{!-- {{/each}} --}}
+    </div>
+    <form class="comment-form">
+        <h4>Leave a Comment:</h4>
+        <textarea name="leave-comment" id="leave-comment" placeholder="Start a discussion..."></textarea>
+        <button class="add-comment" type="submit" id="comment-btn" value="comment">Add Comment</button>
+    </form>
 </div>

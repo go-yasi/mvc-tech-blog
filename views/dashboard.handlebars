@@ -1,0 +1,15 @@
+<div class="user-dashboard">
+    <h3 class="dashboard-title">Welcome to your Dashboard, {{user.username}}</h3>
+    <p class="user-post-count">You have created XX blog posts.</p>
+    <button id="new-post">Create New Post</button>
+
+    <div class="user-posts-container">
+        <h4 class="user-posts-header">All Posts</h4>
+        {{!-- {{#each user_posts as |post|}} --}}
+        <div class="user-post-card">
+            <h4 class="user-post-title">{{post.title}}</h4>
+            <p class="user-post-date">{{post.created_at}}</p>
+        </div>
+        {{!-- {{/each}} --}}
+    </div>
+</div>

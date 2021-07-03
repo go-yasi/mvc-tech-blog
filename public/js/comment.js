@@ -6,14 +6,14 @@ async function newComment(event) {
     const response = await fetch(`/api/comment`, {
         method: 'POST',
         body: JSON.stringify({
-        comment
+            comment
         }),
         headers: {
-        'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
         },
     });
     if (response.ok) {
-        document.location.replace('/post');
+        document.location.reload();
     } else {
         alert('Your comment did not post ☹︎');
     }

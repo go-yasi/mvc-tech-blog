@@ -29,6 +29,4 @@ User.hasMany(Comment, {
 });
 
 
-
-
 module.exports = { Post, User, Comment }

@@ -1,9 +1,10 @@
 ////////////////////////////
-//  ROUTES for /api/dashboard  //
+//  ROUTES for /dashboard  //
 ////////////////////////////
 
 const router = require('express').Router();
-const { User, Post, Comment } = require('../../models');
+const { User, Post, Comment } = require('../models');
+// const withAuth = require('../../utils/auth');
 
 // Render dashboard page
 router.get('/', async (req, res) => {

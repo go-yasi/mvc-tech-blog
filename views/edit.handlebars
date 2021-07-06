@@ -1,9 +1,13 @@
-<h2>Edit Post</h2>
+<h2>Edit This Post</h2>
 <form class="edit-post-form">
     <div>
+        <label for="edit-post-title">Edit Post Title:</label>
+        <br>
       <input name="edit-post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
+      <label for="edit-post-content">Edit Post Content:</label>
+      <br>
       <textarea name="edit-post-content">{{post.content}}</textarea>
     </div>
     <button class="edit-post btn" type="submit">Save Edits</button>

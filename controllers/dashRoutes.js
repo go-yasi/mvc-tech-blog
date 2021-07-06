@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// User dashboard
+// User dashboard with all posts
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -34,6 +34,32 @@ router.get('/', async (req, res) => {
         });
     } catch (err) {
         res.status(500).json(err);
+    }
+});
+
+// Edit post page
+router.get('/edit/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                { model: User }
+            ]
+        });
+        const post = postData.get({ plain: true });
+        res.render('edit', {
+            post
+            // logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/edit', async (req, res) => {
+    try {
+      res.render('edit');
+    } catch (err) {
+      res.status(500).json(err);
     }
 });
 

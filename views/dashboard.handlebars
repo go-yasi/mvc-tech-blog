@@ -1,14 +1,36 @@
 <div class="user-dashboard">
-    <h3 class="dashboard-title">Welcome to your Dashboard {{user.username}}!</h3>
-    <p class="user-post-count">Here are your latest blog posts</p>
-    <button id="new-post">Create New Post</button>
+    <h2 class="dashboard-title">Welcome to your Dashboard</h2>
+    {{!-- <button id="new-post">Create New Post</button> --}}
+    <div class="split-row">
+        <div class="half-col">
+            <h4 class="new-post-title">Create a New Post</h4>
+            <form class="create-new-post">
+                <label for="post-title" class="new-post-title">Post Title:</label>
+                <br>
+                <input type="text" class="new-post-title">
+                <br>
+                <label for="post-content" class="new-post-content">Post Content:</label>
+                <br>
+                <input type="text" class="new-post-content">
+            </form>
+        </div>
+        <div class="half-col">
+            <h4 class="user-stats-title">User Stats</h4>
+            <div class="user-stats">
+                <p class="display-username">Username: @{{user.username}}</p>
+                <p class="member-since">Member since: {{user.created_at}}</p>
+                <p class="post-count">Total posts: {{user_posts.length}}</p>
+            </div>
+        </div>
+    </div>
 
     <div class="user-posts-container">
-        <h4 class="user-posts-header">All Posts</h4>
+        <h4 class="user-posts-header">Your Blog Posts</h4>
         {{!-- {{#each user_posts as |post|}} --}}
-        <div class="user-post-card">
-            <h4 class="user-post-title">{{post.title}}</h4>
-            <p class="user-post-date">{{post.created_at}}</p>
+        <div class="user-post">
+            <h4 class="user-post-title"><a href="/post/{{id}}">Sample Title{{post.title}}</a></h4>
+            <p class="user-post-date">Posted on: {{post.created_at}}</p>
+            <a href="/edit" class="btn edit-post">Edit this Post</a>
         </div>
         {{!-- {{/each}} --}}
     </div>

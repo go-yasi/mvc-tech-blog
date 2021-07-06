@@ -5,7 +5,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 // const withAuth = require('../../utils/auth');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // GET user by id
 router.get('/:id', 

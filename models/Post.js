@@ -18,6 +18,9 @@ Post.init(
         content: {
             type: DataTypes.TEXT,
             allowNull: false,
+            validate: {
+                len: [1]
+            }
         },
         created_at: { 
             type: DataTypes.DATE, 

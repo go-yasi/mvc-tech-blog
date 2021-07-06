@@ -6,7 +6,7 @@ const dashRoutes = require('./dashRoutes');
 
 router.use('/comment', commentRoutes);
 router.use('/user', userRoutes);
-router.use('/user', dashRoutes);
+router.use('/dashboard', dashRoutes);
 
 
 module.exports = router;

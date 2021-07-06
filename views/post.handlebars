@@ -13,16 +13,15 @@
 <div class="blog-post-comments">
     <h4 class="posted-comments-title">Comments About this Post:</h4>
     <div class="all-comments">
-    {{!-- this is where the submitted comments would appear --}}
-        {{!-- {{#each comments as |comment|}} --}}
+        {{#each post as |post|}}
         <div class="comment-card">
-            <p class="comment-text">Example comment here{{comment.comment}}</p>
+            <p class="comment-text">{{post.comment.comment}}</p>
             <div class="comment-details">
-                <p class="comment-user">Posted by: @{{comment.user_id}}</p>
-                <p class="comment-date">Posted on:{{comment.created_at}}</p>
+                <p class="comment-user">Posted by: @{{post.comment.user_id}}</p>
+                <p class="comment-date">Posted on:{{post.comment.created_at}}</p>
             </div>
         </div>
-        {{!-- {{/each}} --}}
+        {{/each}}
     </div>
     <form class="comment-form">
         <h4>Leave a Comment:</h4>

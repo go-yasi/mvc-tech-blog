@@ -1,9 +1,9 @@
 /* GLOBAL */
-/* button {
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
-} */
+:root {
+    --border: black;
+    --accent: white;
+    --inner: limegreen;
+}
 a {
     text-decoration: none;
 }
@@ -12,30 +12,95 @@ textarea {
     width: 100%;
 }
 button {
-    padding: 1em 1.5em;
+    margin: 2vw 0;
+    padding: .2em 1.68em;
     cursor: pointer;
     border-radius: 0;
     border: none;
+    background-color: var(--inner);
+    box-shadow:
+    /* Inner Background Color -- Same as inner */
+      0   -6px 0  -2px var(--inner),
+      0    6px 0  -2px var(--inner),
+      0  -12px 0  -4px var(--inner),
+      0   12px 0  -4px var(--inner),
+      0  -18px 0  -8px var(--inner),
+      0   18px 0  -8px var(--inner),
+      0  -24px 0 -12px var(--inner),
+      0   24px 0 -12px var(--inner),
+    
+    /* Inner Border */
+     -2px  0   0   0   var(--border),
+      2px  0   0   0   var(--border),
+      0   -4px 0   0   var(--border),
+      0    4px 0   0   var(--border),
+      0  -10px 0  -2px var(--border),
+      0   10px 0  -2px var(--border),
+      0  -14px 0  -4px var(--border),
+      0   14px 0  -4px var(--border),
+      0  -20px 0  -8px var(--border),
+      0   20px 0  -8px var(--border),
+      0  -26px 0 -12px var(--border),
+      0   26px 0 -12px var(--border),
+    
+    /* Middle Border -- Accent */
+     -4px  0   0   0   var(--accent),
+      4px  0   0   0   var(--accent),
+      0   -2px 0   2px var(--accent),
+      0    2px 0   2px var(--accent),
+      0   -8px 0   0px var(--accent),
+      0    8px 0   0px var(--accent),
+      0  -12px 0  -2px var(--accent),
+      0   12px 0  -2px var(--accent),
+      0  -16px 0  -4px var(--accent),
+      0   16px 0  -4px var(--accent),
+      0  -22px 0  -8px var(--accent),
+      0   22px 0  -8px var(--accent),
+      0  -28px 0 -12px var(--accent),
+      0   28px 0 -12px var(--accent),
+    
+    /* Outer Border */
+     -6px  0   0   0   var(--border),
+      6px  0   0   0   var(--border),
+      0    0   0   4px var(--border),
+      0   -6px 0   2px var(--border),
+      0    6px 0   2px var(--border),
+      0  -10px 0   0   var(--border),
+      0   10px 0   0   var(--border),
+      0  -14px 0  -2px var(--border),
+      0   14px 0  -2px var(--border),
+      0  -18px 0  -4px var(--border),
+      0   18px 0  -4px var(--border),
+      0  -24px 0  -8px var(--border),
+      0   24px 0  -8px var(--border),
+      0  -30px 0 -12px var(--border),
+      0   30px 0 -12px var(--border);
 }
+
 
 /* MAIN */
 header {
-    background-color: teal;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 nav {
-    background-color: thistle;
+    font-family: 'Press Start 2P', monospace;
+    
 }
 .navguy {
     margin: 0 10px;
+    color: limegreen
 }
 .main-logo {
     font-family: 'Press Start 2P', monospace;
-    font-size: 42px;
+    font-size: 32px;
     color: limegreen;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    word-spacing: -.5em;
 }
 
 /* HOME PAGE */
@@ -58,8 +123,21 @@ nav {
 }
 
 /* SIGN UP PAGE */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
 .graphic {
     width: 20vw;
+    /* animation: float 2s linear infinite; */
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    left: 0;
+    bottom: 0;
 }
 .signup-block, .login-block {
     margin: 0 auto;

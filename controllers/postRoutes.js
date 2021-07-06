@@ -10,7 +10,7 @@ async (req, res) => {
         const postData = await Post.findByPk(req.params.id, {
             include: [
                 { model: User }, 
-                { model: Comment }
+                { model: Comment, attributes: ['comment', 'created_at', 'user_id'] }
             ],
         });
         if (!postData) {
@@ -19,14 +19,11 @@ async (req, res) => {
         }
         const post = postData.get({plain: true});
         // res.status(200).json(postData);
-        res.render('post', {
-            post
-            // logged_in: req.session.logged_in
-        });
+        res.json(post);
+        // res.render('post', {post});
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
 
 module.exports = router;

@@ -22,6 +22,7 @@ async (req, res) => {
 // CREATE new user
 router.post('/', async (req, res) => {
     try {
+        console.log(req.body);
         const userData = await User.create({
             username: req.body.username,
             password: req.body.password
@@ -30,7 +31,6 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.logged_in = true;
             req.session.user_id = userData.id;
-            res.session.username = userData.username;
             res.status(200).json(userData);
         });
 

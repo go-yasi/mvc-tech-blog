@@ -1,26 +1,28 @@
-<img class="welcome-back graphic" src="/../../assets/graphics/welcome-back.png" alt="Pixel art of speech bubble that says Welcome Back!">
-<h2 class="login-title">Login</h2>
-{{!-- Login Form --}}
-<form class="form login-form">
-  <div class="form-group">
-    {{!-- Ask for username --}}
-    <label for="username-login">Username:</label>
-    <br>
-    <input class="form-input" type="text" id="username-login" placeholder="username"/>
-  </div>
-  <div class="form-group">
-    {{!-- Ask for user password --}}
-    <label for="password-signup">Password:</label>
-    <br>
-    <input class="form-input" type="password" id="password-login" placeholder="password"/>
-  </div>
-  <div class="form-group">
-    {{!-- Login button --}}
-    <button class="btn login-button" type="submit">Log In</button>
-  </div>
-  <div class="form-group">
-    <a href="/signup">Need to sign up instead?</a>
-  </div>
-</form>
+<div class="login-block">
+  <h2 class="login-title">Login</h2>
+  <img class="welcome-back graphic" src="/../../assets/graphics/welcome-back.png" alt="Pixel art of speech bubble that says Welcome Back!">
+  {{!-- Login Form --}}
+  <form class="form login-form">
+    <div class="form-group">
+      {{!-- Ask for username --}}
+      <label for="username-login">Username:</label>
+      <br>
+      <input class="form-input" type="text" id="username-login" placeholder="username"/>
+    </div>
+    <div class="form-group">
+      {{!-- Ask for user password --}}
+      <label for="password-signup">Password:</label>
+      <br>
+      <input class="form-input" type="password" id="password-login" placeholder="password"/>
+    </div>
+    <div class="form-group">
+      {{!-- Login button --}}
+      <button class="btn login-button" type="submit">Log In</button>
+    </div>
+    <div class="form-group">
+      <a href="/signup">Need to sign up instead?</a>
+    </div>
+  </form>
+</div>
 
 <script src="./js/login.js"></script>

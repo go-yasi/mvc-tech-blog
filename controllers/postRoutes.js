@@ -19,8 +19,8 @@ async (req, res) => {
         }
         const post = postData.get({plain: true});
         // res.status(200).json(postData);
-        res.json(post);
-        // res.render('post', {post});
+        // res.json(post);
+        res.render('post', {post});
     } catch (err) {
         res.status(500).json(err);
     }

@@ -19,7 +19,7 @@ async (req, res) => {
     }
 });
 
-// CREATE new user
+// CREATE new user at signup
 router.post('/', async (req, res) => {
     try {
         console.log(req.body);

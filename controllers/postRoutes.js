@@ -10,7 +10,7 @@ async (req, res) => {
         const postData = await Post.findByPk(req.params.id, {
             include: [
                 { model: User }, 
-                { model: Comment, attributes: ['comment', 'created_at', 'user_id'] }
+                { model: Comment, include: [ User ] }
             ],
         });
         if (!postData) {
@@ -20,7 +20,7 @@ async (req, res) => {
         const post = postData.get({plain: true});
         // res.status(200).json(postData);
         // res.json(post);
-        res.render('post', {post});
+        res.render('post', post);
     } catch (err) {
         res.status(500).json(err);
     }

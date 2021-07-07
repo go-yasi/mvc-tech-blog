@@ -15,7 +15,7 @@ const signUpFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            alert(`Welcome, ${username}! Logging you in...`);
+            alert(`Welcome to The Tech Blog, @${username}! Logging you in...`);
             document.location.replace('/dashboard');
         } else {
             alert('Signup failed. Please try again.');

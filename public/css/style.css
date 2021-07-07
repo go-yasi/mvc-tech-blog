@@ -19,7 +19,7 @@
 }
 p {
     font-family: 'Pixelmix', monospace;
-    line-height: 1.6;
+    line-height: 1.68;
     font-size: 14px;
 }
 a {
@@ -441,7 +441,7 @@ input {
     padding: 1em;
 }
 .comment-text {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 .comment-details {
     display: flex;
@@ -449,4 +449,7 @@ input {
     color: gray;
     border-top: 2px dashed gray;
     padding-top: .2em;
+}
+.comment-details > p{
+    font-size: 11px;
 }

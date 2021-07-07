@@ -17,7 +17,7 @@ async function newComment(event) {
         },
     });
     if (response.ok) {
-        // document.location.reload();
+        document.location.reload();
     } else {
         alert('Your comment did not post ☹︎');
     }

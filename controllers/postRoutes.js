@@ -28,8 +28,9 @@ router.get('/:id', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.create({
-            title: req.body.title,
-            content: req.body.content,
+            ...req.body, 
+            // title: req.body.title,
+            // content: req.body.content,
             user_id: req.session.user_id
         });
         res.status(200).json(postData);

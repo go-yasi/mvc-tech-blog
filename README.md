@@ -67,5 +67,6 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 [Here](https://www.npmjs.com/package/express-handlebars) is a link to the deployed application.  
 [Here](https://www.npmjs.com/package/express-handlebars) is a link to the GitHub repository containing the application code.  
 
-## Conclusion
+## Credits
+This application used [Sagan Ipsum](http://saganipsum.com/) to generate the content of the blog posts.
 

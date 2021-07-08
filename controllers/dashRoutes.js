@@ -29,8 +29,8 @@ router.get('/', async (req, res) => {
         });
         const posts = postData.get({plain: true});
         res.render('dashboard', {
-            posts
-            // logged_in: req.session.logged_in
+            posts,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -47,8 +47,8 @@ router.get('/edit/:id', async (req, res) => {
         });
         const post = postData.get({ plain: true });
         res.render('edit', {
-            post
-            // logged_in: req.session.logged_in
+            post,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);

@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
                     attributes: ['id'],
                 },
             ],
-            order: [['created_at', 'DESC']]
+            order: [[ 'created_at', 'ASC']]
         });
 
         const comments = commentData.map((comment) => 

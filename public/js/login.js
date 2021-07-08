@@ -15,7 +15,8 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        alert(`Welcome back, @${username}! Logging you in...`);
+        alert(`Welcome back, @${username}! 
+Logging you in...`);
         document.location.replace('/dashboard');
       } else {
         alert('Login failed ☹︎ Please try again!');

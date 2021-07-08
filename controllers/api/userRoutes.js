@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// LOGIN route — WORKING
+// LOGIN user — WORKING
 router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ where: { username: req.body.username } });
@@ -74,5 +74,17 @@ router.post('/login', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+// LOGOUT user 
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
 
 module.exports = router;

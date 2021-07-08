@@ -326,7 +326,7 @@ input {
     margin: 2.34em 4vw;
 }
 .blog-post:hover {
-    background-color: magenta;
+    background-color: var(--light);
 }
 .blog-post:first-child {
     margin-top: 1.2em;

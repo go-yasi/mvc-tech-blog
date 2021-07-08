@@ -23,11 +23,17 @@ router.get('/signup', async (req,res) => {
 router.get('/', async (req, res) => {
     try {
       const postData = await Post.findAll({
+        include: [
+          { model: User }
+        ], 
         order: [[ 'created_at', 'DESC']]
       });
+      // console.log(postData);
   
       const blog_posts = postData.map((info) => info.get({ plain: true }));
-  
+      // res.status(200).json(postData);
+      // console.log(blog_posts);
+
       res.render('home', {
         blog_posts
       });

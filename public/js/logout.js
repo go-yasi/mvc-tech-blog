@@ -5,6 +5,7 @@ const logout = async () => {
     });
   
     if (response.ok) {
+      alert(`Thank you for visting the Tech Blog! See you next time...`);
       document.location.replace('/login');
     } else {
       alert(response.statusText);
@@ -12,4 +13,3 @@ const logout = async () => {
   };
   
 document.querySelector('#logout').addEventListener('click', logout);
-  

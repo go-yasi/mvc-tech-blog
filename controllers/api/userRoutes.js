@@ -21,7 +21,7 @@ async (req, res) => {
     }
 });
 
-// CREATE new user at signup
+// CREATE new user at signup — WORKING
 router.post('/', async (req, res) => {
     try {
         console.log(req.body);
@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// LOGIN route
+// LOGIN route — WORKING
 router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ where: { username: req.body.username } });

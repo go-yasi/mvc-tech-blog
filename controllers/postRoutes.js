@@ -1,11 +1,9 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
-// const withAuth =  require('.//utils/auth;');
+const withAuth =  require('../utils/auth');
 
 // Get individual post by id — WORKING
-router.get('/:id', 
-// withAuth, 
-async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
@@ -27,9 +25,7 @@ async (req, res) => {
 });
 
 // Create new post
-router.post('/', 
-// withAuth, 
-async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.create({
             title: req.body.title,

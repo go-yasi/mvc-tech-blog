@@ -36,12 +36,15 @@
         <h4>Heading Four</h4>
         <h5>Heading Five</h5>
         <h6>Heading Six</h6> --}}
-        {{#each user_posts as |post|}}
+        {{#each posts as |post|}}
         <div class="user-post">
             <h4 class="user-post-title"><a href="/post/{{post.id}}">Sample Title{{post.title}}</a></h4>
+            <p>{{post.content}}</p>
             <p class="user-post-date">Posted on: {{post.created_at}}</p>
             <a href="/dashboard/edit" class="btn edit-post">Edit this Post</a>
         </div>
         {{/each}}
     </div>
 </div>
+
+<script src="/js/new-post.js"></script>

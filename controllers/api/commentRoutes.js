@@ -18,7 +18,7 @@ async (req, res) => {
     }
 });
 
-// GET 
+// GET to show comments on blog post
 router.get('/', async (req, res) => {
     try {
         const commentData = await Comment.findAll({
@@ -32,12 +32,13 @@ router.get('/', async (req, res) => {
                     attributes: ['id'],
                 },
             ],
-            order: [[ 'created_at', 'ASC']]
+            order: [[ Comment, 'comment', 'DESC']]
         });
 
         const comments = commentData.map((comment) => 
         comment.get({ plain: true })
         );
+        res.status(200).json(comments);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

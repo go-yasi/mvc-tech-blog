@@ -7,18 +7,19 @@ const { User, Post, Comment } = require('../models');
 // const withAuth = require('../../utils/auth');
 
 // Render dashboard page — WORKING
-router.get('/', async (req, res) => {
-    try {
-        res.render('dashboard');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// router.get('/', async (req, res) => {
+//     try {
+//         res.render('dashboard');
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 // User dashboard with all posts
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
+
             where:{
                 user_id: req.session.user_id
             },
@@ -27,11 +28,15 @@ router.get('/', async (req, res) => {
                 { model: Comment }
             ]
         });
-        const posts = postData.get({plain: true});
+        console.log(postData);
+        
+        const posts = postData.map(post=>post.get({plain:true}));
+        console.log(posts);
         res.render('dashboard', {
             posts,
             logged_in: req.session.logged_in
         });
+        // res.json(true);
     } catch (err) {
         res.status(500).json(err);
     }

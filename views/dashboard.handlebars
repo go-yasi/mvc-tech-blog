@@ -2,8 +2,7 @@
     <h1 class="dashboard-title">Welcome to your Dashboard</h1>
     {{!-- <button id="new-post">Create New Post</button> --}}
     <div class="split-row">
-        <div class="half-col">
-            
+        {{!-- <div class="half-col">
             <form class="create-new-post">
                 <h4 class="new-post-header">Create a New Post</h4>
                 <label for="post-title" class="new-post-title">Post Title:</label>
@@ -16,14 +15,15 @@
                 <br>
                 <button id="add-post-btn" type="submit" value="comment">Create Post</button>
             </form>
-        </div>
+        </div> --}}
         <div class="half-col stats">
-            
             <div class="user-stats">
                 <h4 class="user-stats-title">User Stats</h4>
                 <p class="display-username">Username: @{{user.username}}</p>
                 <p class="member-since">Member since: {{user.created_at}}</p>
                 <p class="post-count">Total posts: {{user_posts.length}}</p>
+                <button id="add-post-btn" type="submit" value="comment">Create New Post</button>
+                <img class="treasure-gif" src="/../../assets/graphics/tech-blog-treasure.gif" alt="Pixelated pile of gold coins with sparkles">
             </div>
         </div>
     </div>

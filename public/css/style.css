@@ -365,8 +365,8 @@ input {
 }
 .half-col {
     width: 40%;
-    border-top: 4px solid limegreen;
-    border-bottom: 4px solid limegreen;
+    border-top: 4px double limegreen;
+    border-bottom: 4px double limegreen;
 }
 .create-new-post {
     padding: 2em;
@@ -377,7 +377,7 @@ input {
     text-align: center;
     margin-bottom: 2em;
 }
-.stats {
+.half-col.stats {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -385,12 +385,16 @@ input {
 }
 .user-stats {
     /* border: 1px solid red; */
-    padding: 2em;
+    padding: 2em 2em 0;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: flex-end;
     align-items: center;
     justify-content: center;
+}
+.treasure-gif {
+    margin-top: 2em;
+    width: 60%;
 }
 .user-posts-container {
     margin: 4vw;
@@ -417,7 +421,6 @@ input {
     background-color: #ccc;
     margin-top: 1em;
 }
-
 .blog-post-comments {
     /* padding: 4vw 6vw 1vw; */
     margin-top: 4vw;

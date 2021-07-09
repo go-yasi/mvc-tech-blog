@@ -77,7 +77,9 @@ h6 {
     --commentbg: #dae3f7;
 }
 body {
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    height: 100%;
+    position: relative;
 }
 
 textarea {
@@ -291,6 +293,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.3em .6em;
+    position: -webkit-sticky;
     /* outline: 3px solid var(--dark);
     margin: 3px; */
 }
@@ -310,6 +313,26 @@ nav {
     letter-spacing: .1em;
     word-spacing: -.5em;
     -webkit-text-stroke: 1px black;
+}
+footer {
+    background-color: var(--teal);
+    text-align: center;
+    padding: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer-text a{
+    color: var(--dark);
+    transition: .3s ease;
+}
+.footer-text a:hover{
+    color: var(--pink);
+}
+.heart-gif {
+    width: 16px;
 }
 
 /* SIGN UP + LOGIN PAGES */

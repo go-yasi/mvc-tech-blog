@@ -20,6 +20,7 @@ Logging you in...`);
         document.location.replace('/dashboard');
       } else {
         alert('Login failed ☹︎ Please try again!');
+        document.location.reload();
       }
     }
   };

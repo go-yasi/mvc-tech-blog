@@ -73,6 +73,7 @@ h6 {
     --green: #48B94D;
     --purple: #56568c8c;
     --pink: #F52772;
+    --red: #fa3b39;
     --commentbg: #dae3f7;
 }
 body {
@@ -83,7 +84,7 @@ textarea {
     resize: none;
     width: 100%;
 }
-button {
+.green-btn {
     font-family: 'Press Start 2P', monospace;
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -133,7 +134,57 @@ button {
   0  -30px 0 -12px var(--border),
   0   30px 0 -12px var(--border);
 }
-button:hover {
+.red-btn {
+    font-family: 'Press Start 2P', monospace;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin: 2vw 0;
+    padding: .2em 1.68em;
+    cursor: pointer;
+    border: none;
+    transition: .5s ease;
+    background-color: var(--red);
+    box-shadow:
+    /* Inner Background Color -- Same as inner */
+    0   -6px 0  -2px var(--red),
+    0    6px 0  -2px var(--red),
+    0  -12px 0  -4px var(--red),
+    0   12px 0  -4px var(--red),
+    0  -18px 0  -8px var(--red),
+    0   18px 0  -8px var(--red),
+    0  -24px 0 -12px var(--red),
+    0   24px 0 -12px var(--red),
+  /* Inner Border */
+   -2px  0   0   0   var(--red),
+    2px  0   0   0   var(--red),
+    0   -4px 0   0   var(--red),
+    0    4px 0   0   var(--red),
+    0  -10px 0  -2px var(--red),
+    0   10px 0  -2px var(--red),
+    0  -14px 0  -4px var(--red),
+    0   14px 0  -4px var(--red),
+    0  -20px 0  -8px var(--red),
+    0   20px 0  -8px var(--red),
+    0  -26px 0 -12px var(--red),
+    0   26px 0 -12px var(--red),
+  /* Outer Border */
+  -6px  0   0   0   var(--border),
+  6px  0   0   0   var(--border),
+  0    0   0   4px var(--border),
+  0   -6px 0   2px var(--border),
+  0    6px 0   2px var(--border),
+  0  -10px 0   0   var(--border),
+  0   10px 0   0   var(--border),
+  0  -14px 0  -2px var(--border),
+  0   14px 0  -2px var(--border),
+  0  -18px 0  -4px var(--border),
+  0   18px 0  -4px var(--border),
+  0  -24px 0  -8px var(--border),
+  0   24px 0  -8px var(--border),
+  0  -30px 0 -12px var(--border),
+  0   30px 0 -12px var(--border);
+}
+.green-btn:hover {
     background-color: var(--gold);
     box-shadow:
     /* Inner Background Color -- Same as inner */
@@ -158,6 +209,48 @@ button:hover {
     0   20px 0  -8px var(--gold),
     0  -26px 0 -12px var(--gold),
     0   26px 0 -12px var(--gold),
+  /* Outer Border */
+  -6px  0   0   0   var(--border),
+  6px  0   0   0   var(--border),
+  0    0   0   4px var(--border),
+  0   -6px 0   2px var(--border),
+  0    6px 0   2px var(--border),
+  0  -10px 0   0   var(--border),
+  0   10px 0   0   var(--border),
+  0  -14px 0  -2px var(--border),
+  0   14px 0  -2px var(--border),
+  0  -18px 0  -4px var(--border),
+  0   18px 0  -4px var(--border),
+  0  -24px 0  -8px var(--border),
+  0   24px 0  -8px var(--border),
+  0  -30px 0 -12px var(--border),
+  0   30px 0 -12px var(--border);
+}
+.red-btn:hover {
+    background-color: var(--pink);
+    box-shadow:
+    /* Inner Background Color -- Same as inner */
+    0   -6px 0  -2px var(--pink),
+    0    6px 0  -2px var(--pink),
+    0  -12px 0  -4px var(--pink),
+    0   12px 0  -4px var(--pink),
+    0  -18px 0  -8px var(--pink),
+    0   18px 0  -8px var(--pink),
+    0  -24px 0 -12px var(--pink),
+    0   24px 0 -12px var(--pink),
+  /* Inner Border */
+   -2px  0   0   0   var(--pink),
+    2px  0   0   0   var(--pink),
+    0   -4px 0   0   var(--pink),
+    0    4px 0   0   var(--pink),
+    0  -10px 0  -2px var(--pink),
+    0   10px 0  -2px var(--pink),
+    0  -14px 0  -4px var(--pink),
+    0   14px 0  -4px var(--pink),
+    0  -20px 0  -8px var(--pink),
+    0   20px 0  -8px var(--pink),
+    0  -26px 0 -12px var(--pink),
+    0   26px 0 -12px var(--pink),
   /* Outer Border */
   -6px  0   0   0   var(--border),
   6px  0   0   0   var(--border),
@@ -276,9 +369,6 @@ nav {
     left: 0;
     bottom: 0;
 }
-.signup-form {
-    /* border: 4px solid red; */
-}
 .signup-block, .login-block {
     margin: 0 auto;
     /* border: 10px solid limegreen; */
@@ -308,6 +398,7 @@ input {
     display: flex;
     align-items: center;
     margin: 4vw 4vw 2vw;
+    justify-content: center;
 }
 .star-gif{
     width: 40px;
@@ -326,7 +417,7 @@ input {
     margin: 2.34em 4vw;
 }
 .blog-post:hover {
-    background-color: var(--light);
+    background-color: var(--commentbg);
 }
 .blog-post:first-child {
     margin-top: 1.2em;
@@ -422,21 +513,20 @@ input {
     margin-top: 1em;
 }
 .blog-post-comments {
-    /* padding: 4vw 6vw 1vw; */
     margin-top: 4vw;
 }
 .add-comment {
     display: flex;
-    /* align-items: stretch; */
-    justify-content: space-between;
     margin-top: 1em;;
+    align-items: stretch;
 }
-#new-comment {
+/* #new-comment {
     width: 78% !important;
-    /* min-height: 30px; */
-}
+    /* min-height: 30px; 
+} */
 #add-new-comment {
-    /* margin:0  !important; */
+    flex: none;
+    margin: 0 1em;
 }
 .comment-card {
     margin-top: 1.68em;
@@ -455,4 +545,39 @@ input {
 }
 .comment-details > p{
     font-size: 11px;
+}
+.user-post {
+    border: 4px double;
+}
+.user-post-title {
+    background-color: var(--light);
+    border-bottom: 4px double;
+    padding: 1.1em .5em .9em;
+    text-transform: uppercase;
+    color: black
+}
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-post-content {
+    padding: .5em 1em;
+}
+.edit-post {
+    margin: 0 2em;
+    flex: none;
+    font-size: 13px;
+}
+
+/* EDIT POST PAGE */
+.edit-post-page {
+    padding: 6vw 12vw 4vw;
+}
+.edit-post-form {
+    margin: 2vw auto;
+}
+.edit-post-buttons {
+    display: flex;
+    justify-content: space-between;
 }

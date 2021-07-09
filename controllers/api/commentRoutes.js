@@ -18,31 +18,31 @@ async (req, res) => {
     }
 });
 
-// GET to show comments on blog post
-router.get('/', async (req, res) => {
-    try {
-        const commentData = await Comment.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['id','username'],
-                },
-                {
-                    model: Post,
-                    attributes: ['id'],
-                },
-            ],
-            order: [[ Comment, 'comment', 'DESC']]
-        });
+// // GET to show comments on blog post
+// router.get('/', async (req, res) => {
+//     try {
+//         const commentData = await Comment.findAll({
+//             include: [
+//                 {
+//                     model: User,
+//                     attributes: ['id','username'],
+//                 },
+//                 {
+//                     model: Post,
+//                     attributes: ['id'],
+//                 },
+//             ],
+//             order: [[ Comment, 'comment', 'DESC']]
+//         });
 
-        const comments = commentData.map((comment) => 
-        comment.get({ plain: true })
-        );
-        res.status(200).json(comments);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+//         const comments = commentData.map((comment) => 
+//         comment.get({ plain: true })
+//         );
+//         res.status(200).json(comments);
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
 module.exports = router;

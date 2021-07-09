@@ -1,17 +1,24 @@
-<h2>Edit This Post</h2>
-<form class="edit-post-form">
-    <div>
-        <label for="edit-post-title">Edit Post Title:</label>
-        <br/>
-        <input class="edit-post-title" id="edit-post-title" name="edit-post-title" value="{{post.title}}"></input>
-        <br/>
-    </div>
-    <div>
-        <label for="edit-post-content">Edit Post Content:</label>
-        <br/>
-        <textarea class="edit-post-content" id="edit-post-content" name="edit-post-content" value="{{post.content}}"></textarea>
-        <br/>
-    </div>
-    <button class="edit-post-btn" type="submit">Save Edits</button>
-    <button class="delete-post-btn" type="button">Delete post</button>
-</form>
+<div class="edit-post-page">
+    <h2 class="edit-post-header">Edit This Post</h2>
+    <form class="edit-post-form">
+        <div>
+            <label for="edit-post-title">Edit Post Title:</label>
+            <br/>
+            <input class="edit-post-title" id="edit-post-title" name="edit-post-title" value="{{post.title}}"></input>
+            <br/>
+        </div>
+        <div>
+            <label for="edit-post-content">Edit Post Content:</label>
+            <br/>
+            <textarea class="edit-post-content" id="edit-post-content" name="edit-post-content" value="{{post.content}}"></textarea>
+            <br/>
+        </div>
+        <div class="edit-post-buttons">
+            <button class="edit-post-btn green-btn" type="submit">Save Edits</button>
+            <button class="delete-post-btn red-btn" type="delete">Delete Post</button>
+        </div>
+        
+    </form>
+</div>
+
+<script src="./js/edit-post.js"></script>

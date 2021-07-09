@@ -3,23 +3,20 @@
 ////////////////////////////
 
 const router = require('express').Router();
-const { User, Post, Comment } = require('../../models');
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-// const withAuth = require('../../utils/auth');
+const { User } = require('../../models');
 
 // GET user by id
-router.get('/:id', 
-// withAuth, 
-async (req, res) => {
-    try {
-        const userData = await User.findByPk(req.params.id);
-        const user = userData.get({ plain: true });
-        res.render('dashboard', user);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// router.get('/:id', 
+// // withAuth, 
+// async (req, res) => {
+//     try {
+//         const userData = await User.findByPk(req.params.id);
+//         const user = userData.get({ plain: true });
+//         res.render('dashboard', user);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 // CREATE new user at signup — WORKING
 router.post('/', async (req, res) => {

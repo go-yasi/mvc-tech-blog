@@ -5,7 +5,7 @@ async function editFormHandler(event) {
     const content = document.querySelector('#edit-post-content').value.trim();
     // need to get time of submit for 'updated at'
 
-    const response = await fetch('/api/post', {
+    const response = await fetch('/post', {
         method: 'PUT',
         body: JSON.stringify({
             title,

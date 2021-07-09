@@ -6,7 +6,7 @@ async function editFormHandler(event) {
     // need to get time of submit for 'updated at'
 
     const response = await fetch('/post', {
-        method: 'PUT',
+        method: 'POST',
         body: JSON.stringify({
             title,
             content
@@ -14,7 +14,7 @@ async function editFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashbaord');
+        document.location.replace('/dashboard');
     } else {
         alert('Update failed. Please try again.');
     }

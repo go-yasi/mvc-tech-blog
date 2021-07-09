@@ -10,7 +10,7 @@ router.get('/:id', withAuth, async (req, res) => {
                 { model: User }, 
                 { model: Comment, include: [ User ] }
             ],
-            order: [[Comment, 'created_at', 'DESC']]
+            order: [[Comment, 'comment', 'DESC']]
         });
         if (!postData) {
             res.status(404).json({ message: "The post you're looking for does not exist"});

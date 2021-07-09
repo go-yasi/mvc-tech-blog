@@ -315,6 +315,7 @@ nav {
     -webkit-text-stroke: 1px black;
 }
 footer {
+    border-top: 4px solid var(--light);
     background-color: var(--teal);
     text-align: center;
     padding: 5px 0;
@@ -577,7 +578,9 @@ input {
     border-bottom: 4px double;
     padding: 1.1em .5em .9em;
     text-transform: uppercase;
-    color: black
+}
+.user-post-title a {
+    color: var(--dark);
 }
 .flexbox {
     display: flex;
@@ -588,9 +591,10 @@ input {
     padding: .5em 1em;
 }
 .edit-post {
-    margin: 0 2em;
+    margin: 2em;
     flex: none;
     font-size: 13px;
+    color: black;
 }
 
 /* EDIT POST PAGE */
